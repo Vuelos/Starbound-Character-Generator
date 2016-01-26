@@ -1,26 +1,25 @@
 function Painter( canvas )
 {
-	this.SPRITE_SIZE			= 43;
-	this.PREVIEW_MULTI			= 3;
-	
-	this.CANVAS					= canvas;
+	this.SPRITE_SIZE		= 43;
+	this.PREVIEW_MULTI		= 3;
+	this.CANVAS			= canvas;
 	
 	if ( window.G_vmlCanvasManager )
 		window.G_vmlCanvasManager.initElement( canvas );
 	
 	if ( canvas.getContext )
-		this.CONTEXT			= canvas.getContext( "2d" );
+		this.CONTEXT		= canvas.getContext( "2d" );
 	
-	this.backArmCanvas			= document.getElementById( "tempCanvas1" );
+	this.backArmCanvas		= document.getElementById( "tempCanvas1" );
 	this.backSleeveCanvas		= document.getElementById( "tempCanvas2" );
-	this.hairCanvas				= document.getElementById( "tempCanvas3" );
-	this.bodyCanvas				= document.getElementById( "tempCanvas4" );
-	this.pantsCanvas			= document.getElementById( "tempCanvas5" );
-	this.shirtCanvas			= document.getElementById( "tempCanvas6" );
-	this.helmetCanvas			= document.getElementById( "tempCanvas7" );
-	this.altCanvas				= document.getElementById( "tempCanvas8" );
-	this.headCanvas				= document.getElementById( "tempCanvas9" );
-	this.frontArmCanvas			= document.getElementById( "tempCanvas10" );
+	this.hairCanvas			= document.getElementById( "tempCanvas3" );
+	this.bodyCanvas			= document.getElementById( "tempCanvas4" );
+	this.pantsCanvas		= document.getElementById( "tempCanvas5" );
+	this.shirtCanvas		= document.getElementById( "tempCanvas6" );
+	this.helmetCanvas		= document.getElementById( "tempCanvas7" );
+	this.altCanvas			= document.getElementById( "tempCanvas8" );
+	this.headCanvas			= document.getElementById( "tempCanvas9" );
+	this.frontArmCanvas		= document.getElementById( "tempCanvas10" );
 	this.frontSleeveCanvas		= document.getElementById( "tempCanvas11" );
 }
 
@@ -218,8 +217,8 @@ Painter.prototype.paintToCanvas = function( sheet, offsetX, offsetY, nudgeX, nud
 			
 			this.CONTEXT.fillStyle		= "#" + colorHex;
 			this.CONTEXT.strokeStyle	= "#" + colorHex;
-			tempCtx.fillStyle			= "#" + colorHex;
-			tempCtx.strokeStyle			= "#" + colorHex;
+			tempCtx.fillStyle		= "#" + colorHex;
+			tempCtx.strokeStyle		= "#" + colorHex;
 			
 			//tempCtx.clearRect( posX, posY, 1, 1 );
 			//tempCtx.fillRect( posX + nudgeX, posY + nudgeY, 1, 1 );
@@ -319,7 +318,6 @@ Painter.prototype.rgbToHex = function( r, g, b  )
 	var bs = b.toString(16);
 	if ( bs.length == 1 )
 		bs = "0" + bs;
-	
 	
 	return rs + gs + bs;
 };
